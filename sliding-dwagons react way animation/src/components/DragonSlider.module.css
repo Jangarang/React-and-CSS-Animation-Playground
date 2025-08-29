@@ -1,0 +1,34 @@
+.slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d; /*allows for 3d depth */
+    transform: perspective(1000px); /*small dramatics things look bigger and big value weaker effect looks flatter*/
+    animation: autoRun 20s linear infinite;
+    z-index: 2; 
+}
+
+@keyframes autoRun {
+    /*Changing x direction allows you to see difference angles of the items in a vertical manner*/
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(200deg);
+    }to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.item { /*list of items*/
+    position: absolute; /*fix the position*/
+    inset: 0 0 0 0; /*This will give it the same size and position as the class slider*/
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) /*assign units multiply by 1*/
+        translateZ(550px);
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*fixes distortion*/
+}

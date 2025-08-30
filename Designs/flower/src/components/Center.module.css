@@ -1,0 +1,13 @@
+/* .center {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,150%);
+} */
+.center {  
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #FF7C42;
+    position: relative;
+}

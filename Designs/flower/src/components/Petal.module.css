@@ -1,0 +1,36 @@
+/* .petal {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 30, 255, 0.5);
+} */
+
+/* .petal {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background-color: rgba(20, 30, 255, 0.5);
+  transform-origin: center 100px;
+} */
+
+.petal {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  position: absolute;    /* absolute positioning within .center */
+  top: 0;              /* position the petal at the center vertically */
+  left: 0;             /* position the petal at the center horizontally */
+  transform: translate(-50%, -50%);  /* offset by half of the element’s size to center it */
+  background-color: rgba(20, 30, 255, 0.5);
+  transform-origin: center 150px;
+}

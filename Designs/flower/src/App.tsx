@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Center from './components/center'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="wrap">
+      <Center/>
+      {/* <Petal styles={{ transform: 'rotate(45deg)'}}/>
+      <Petal styles={{ transform: 'rotate(90deg)'}}/>
+      <Petal styles={{ transform: 'rotate(135deg)'}}/>
+      <Petal styles={{ transform: 'rotate(180deg)'}}/>
+      <Petal styles={{ transform: 'rotate(225deg)'}}/>
+      <Petal styles={{ transform: 'rotate(270deg)'}}/>
+
+      <Petal styles={{ transform: 'rotate(315deg)'}}/>
+
+      <Petal styles={{ transform: 'rotate(360deg)'}}/> */}
+      {/* <Petal styles=
+        {
+          { 
+            top: 'calc(50% - 71px - 50px)',
+            left: 'calc(50% + 71px - 50px)',
+          
+          } 
+        } 
+      /> */}
+      {/* <Petal styles={{ top: 'calc(50% - 50px)', left: 'calc(50% + 100px - 50px)'}}/>
+    
+      <Petal styles={{top: 'calc(50% + 71px - 50px)', left: 'calc(50% + 71px - 50px)'}}/>
+      <Petal/>
+      <Petal/>
+      <Petal/>
+      <Petal/>
+      <Petal/> */}
+    </div>
+  );
+};
 
 export default App

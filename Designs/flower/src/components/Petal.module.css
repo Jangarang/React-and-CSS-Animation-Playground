@@ -30,7 +30,7 @@
   position: absolute;    /* absolute positioning within .center */
   top: 0;              /* position the petal at the center vertically */
   left: 0;             /* position the petal at the center horizontally */
-  transform: translate(-50%, -50%);  /* offset by half of the element’s size to center it */
+  /*transform: translate(-50%, -50%);*/  /* offset by half of the element’s size to center it */
   background-color: rgba(20, 30, 255, 0.5);
   transform-origin: center 150px;
 }

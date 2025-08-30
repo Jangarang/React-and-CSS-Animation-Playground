@@ -7,7 +7,7 @@ type PetalProps = {
 const Petal = ({styles}: PetalProps) => {
     return (
         <div className={style.petal} style={styles}>
-
+            circle
         </div>
     );
 };

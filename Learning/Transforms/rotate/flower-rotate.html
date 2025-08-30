@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        html, body, #root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+    </style>
+    <style>
+        
+         .container {
+            /*position: relative;*/   /* The container defines the space for absolute positioning */
+            width: 150px;         /* Container width to fit both circles */
+            height: 150px;        /* Container height to fit both circles */
+        }
+
+        .circle {
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            width: 150px;
+            height: 150px;
+            color: white;
+            display: flex;
+            border-radius: 999px;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem; 
+            position: relative; /* absolute takes the divs out of normal flow*/
+            border: 1px solid rgb(0,0,0); /* Border with transparency */
+          
+        }
+        #c1 {
+            background-color: pink;
+            border: 5px solid rgb(0,0,0); /* Border with transparency */
+        }
+        #c2.circle {
+            transform: rotate(45deg);
+        }
+        #c3.circle {
+           transform: rotate(45deg) translate(75px); 
+        }
+        #c4.circle {
+            transform: rotate(45deg) translate(75px) rotate(-45deg);
+        }
+
+        .petalcontainer {
+            position: absolute;
+            transform-origin: center 25px; 
+        }
+
+        #p1{
+            color: red;
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            transform: rotate(45deg) translate(75px) rotate(-45deg);
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            position: absolute;
+            display: flex;  
+            justify-content: center;
+            align-items: center; 
+        }
+        #p2 {
+            transform: rotate(90deg) translate(75px) rotate(-90deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            position: absolute;
+            display: flex;
+          
+            justify-content: center;
+            align-items: center; 
+        }
+        #p3 {
+            transform: rotate(135deg) translate(75px) rotate(-135deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #p4 {
+            transform: rotate(180deg) translate(75px) rotate(-180deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center; 
+        }
+        #p5 {
+            transform: rotate(225deg) translate(75px) rotate(-225deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            display: flex;
+            position: absolute; 
+            justify-content: center;
+            align-items: center; 
+        }
+        #p6 {
+            transform: rotate(270deg) translate(75px) rotate(-270deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center; 
+        }
+        #p7 {
+            transform: rotate(315deg) translate(75px) rotate(-315deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center; 
+        }
+        #p8 {
+            transform: rotate(360deg) translate(75px) rotate(-360deg);
+            background-color: rgba(0, 0, 255, 0.3); /* Transparent background with blue color */
+            color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="circle" id="c1">C1
+      <!-- <div class="circle" id="c2">C2</div>
+      <div class="circle" id="c3">C3</div>
+      <div class="circle" id="c4">C4</div> -->
+      <div class="petalcontainer">
+        <div class="petal" id="p1">p1</div>        
+        <div class="petal" id="p2">p2</div>
+        <div class="petal" id="p3">p3</div>
+        <div class="petal" id="p4">p4</div>
+        <div class="petal" id="p5">p5</div>
+        <div class="petal" id="p6">p6</div>
+        <div class="petal" id="p7">p7</div>
+        <div class="petal" id="p8">p8</div>
+        </div>
+    </div>
+    </div> 
+</body>
+</html>

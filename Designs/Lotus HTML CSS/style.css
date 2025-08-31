@@ -1,0 +1,17 @@
+div {
+    height: 40px;
+    overflow: hidden;
+}
+
+div::before {
+    display: block;
+    content: '';
+    height: 600px;
+    width: 600px;
+    background: black;
+    border-radius: 25%;
+    /* margin-left: -150px; */
+}
+/* .bottom::before{
+    margin-top: -560px;
+} */

@@ -1,0 +1,4 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom left, teal,purple) /*Gradient that goes in a straight line*/
+}

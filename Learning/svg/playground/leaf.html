@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Segment Example</title>
+  <style>
+    svg {
+      background: #f0f0f0;
+    }
+    path {
+      cursor: pointer;
+      transition: fill 0.3s;
+    }
+    .outer:hover { fill: lightgreen; }
+    .inner1:hover { fill: orange; }
+    .inner2:hover { fill: yellow; }
+  </style>
+</head>
+<body>
+  <svg viewBox="0 0 200 200" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer segment (big petal shape) -->
+    <path class="outer"
+          d="M100,20 Q40,100 100,180 Q160,100 100,20 Z"
+          fill="green" stroke="darkgreen" stroke-width="2"
+          onclick="alert('Outer petal clicked!')" />
+
+    <!-- Left inner segment -->
+    <path class="inner1"
+          d="M100,20 Q70,100 100,180 L100,20 Z"
+          fill="lightblue" stroke="darkblue" stroke-width="1"
+          onclick="alert('Left inner clicked!')" />
+
+    <!-- Right inner segment -->
+    <path class="inner2"
+          d="M100,20 Q130,100 100,180 L100,20 Z"
+          fill="lightpink" stroke="darkred" stroke-width="1"
+          onclick="alert('Right inner clicked!')" />
+  </svg>
+</body>
+</html>

@@ -5,7 +5,7 @@ html, body {
 
 body {
   background: hsl(0, 0%, 4%);
-  background-image: linear-gradient(hsl(0, 0%, 6%) 1px, transparent 1px), linear-gradient(to right, hsl(0, 0%, 6%) 1px, transparent 1px);
+  /* background-image: linear-gradient(hsl(0, 0%, 6%) 1px, transparent 1px), linear-gradient(to right, hsl(0, 0%, 6%) 1px, transparent 1px); */
   background-size: 3.3333333333vmin 3.3333333333vmin;
 }
 
@@ -72,7 +72,7 @@ body {
   width: 0.5em;
   height: 0.5em;
   margin: auto;
-  /* background: currentColor; */
+  background: currentColor;
   /*circles within each segment*/
   box-shadow: 0.5em 0 0 0, 1em 0 0 0, -1em 0 0 0, -0.5em 0 0 0;
   /*This creates the circles inside each segment*/

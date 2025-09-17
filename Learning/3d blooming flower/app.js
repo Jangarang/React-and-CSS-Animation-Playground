@@ -10,7 +10,7 @@ var petalPartMarkup = '<div class="box"> \
 
 var maxParts = 20; /* Segment the petal into 20 divided boxes */
 
-var maxPetalsDef = 6; /* # of petals */
+var maxPetalsDef = 7; /* # of petals */
 
 var maxPetals = maxPetalsDef; // 6
 // console.log('maxPetals', maxPetals);
@@ -33,6 +33,7 @@ function createFlower () {
         var petal = createPetal(); 
 
         var currAngle = angle * i + 'deg'; 
+        console.log(currAngle);
 
         var transform = 'transform: rotateY(' + currAngle + ') rotateX(-30deg) translateZ(9vmin)';
 
@@ -120,6 +121,7 @@ function createBox ( box, pos ) {
     // // 4. Add shape to new box
     newBox.appendChild( newShape );
 
+    // console.log(newBox);
     
     return newBox;
 }

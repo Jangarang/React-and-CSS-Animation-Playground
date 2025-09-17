@@ -1,82 +1,134 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --dark-color: #000;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: var(--dark-color);
-    perspective: 1000px; /*wtf??*/
+  background: hsl(0, 0%, 4%);
+  /* background-image: linear-gradient(hsl(0, 0%, 6%) 1px, transparent 1px), linear-gradient(to right, hsl(0, 0%, 6%) 1px, transparent 1px); */
+  background-size: 3.3333333333vmin 3.3333333333vmin;
 }
 
-.flowers {
-    position: relative;
-    transform: scale(0.7);
+.range {
+  /* display: none; */
+  position: absolute;
+  zind: 2px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 10vmin;
+  height: 10vmin;
+  font-size: 10vmin;
+  transform: rotateX(-45deg);
+  transform-style: preserve-3d;
 }
 
 .flower {
-    position: absolute;
-    bottom: 10vmin;
-    transform-origin: bottom center;
-    z-index: 10;
+  width: 25vmin;
+  height: 25vmin;
+  animation: rotate-flower 10s linear infinite;
+  transform-style: preserve-3d;
 }
-
-.flower__line {
-    height: 55vmin;
-    width: 1.5vmin;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, rgba(255, 255, 255, 0.2)), linear-gradient(to top, transparent 10%, #14757a, #39c6d6);
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-    animation: grow-flower-tree 4s 2s backwards;
-}
-
-.flower__white-circle {
-    position: absolute;
-    left: -3.5vmin;
-    top: -3vmin;
-    width: 9vmin;
-    height: 4vmin;
-    border-radius: 50%;
-    background-color: #fff;
-}
-
-.flower__white-circle::after {
+.flower:before {
   content: "";
+  display: block;
   position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
-  border-radius: inherit;
-  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  /* repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), 
-  repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px),  */
-  linear-gradient(90deg, #ffeb12, #ffce00);
+  width: 95%;
+  height: 95%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: hsl(100, 100%, 20%);
+  border-radius: 50%;
+  transform: rotateX(90deg);
+  animation: rotate-hue 5s infinite;
+}
+.petal {
+  position: absolute;
+  /* background-color: blue; */
+  z-index: 20;
+  bottom: 80%;
+  left: -10vmin;
+    width: 20vmin;         /* give it a size */
+  height: 45vmin;         /* height matters */
+  transform: rotateY(205.71428571428572deg) rotateX(-30deg) translateZ(9vmin);
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  
 }
 
-@keyframes grow-flower-tree {
+.box-1 {
+  width: 20vmin;
+  height: 15vmin;           /* give it height */
+  background:red;
+  border-radius: 70px 70px 0 0;
+  clip-path: path(
+    "M50 0 C75 15, 100 60, 80 200 L20 200 C0 60, 25 15, 50 0 Z"
+  );
+
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  animation: rotate-box 12s infinite;
+}
+
+.box-2 {
+  width: 20vmin;
+  height: 11.25vmin;           /* give it height */
+  background:red;
+    clip-path: path(
+  "M10 0 L90 0 L90 150 L10 150 Z"
+);
+
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  animation: rotate-box 12s infinite;
+}
+
+.box-3 {
+  width: 20vmin;
+  height: 11.25vmin;           /* give it height */
+  background:red;
+    clip-path: path(
+  "M10 0 L90 0 L90 150 L10 150 Z"
+);
+
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  animation: rotate-box 12s infinite;
+}
+
+@keyframes rotate-box {
   0% {
-    height: 0;
-    border-radius: 1vmin;
+    transform: rotateX(3.5deg);
+  }
+  15% {
+    transform: rotateX(3.5deg);
+  }
+  50% {
+    transform: rotateX(-7deg);
+  }
+  75% {
+    transform: rotateX(-7deg);
+  }
+  100% {
+    transform: rotateX(3.5deg);
+  }
+}
+@keyframes rotate-flower {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-hue {
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
